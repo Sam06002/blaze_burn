@@ -1,0 +1,128 @@
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--charcoal);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: var(--spacing-sm);
+  opacity: 0.9;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.feature-item {
+  text-align: center;
+  padding: var(--spacing-md);
+  background: var(--cream);
+  border-radius: 16px;
+  transition: all var(--transition-smooth);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+  filter: grayscale(20%);
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  margin-bottom: var(--spacing-xs);
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.about-image {
+  position: relative;
+}
+
+.image-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-smooth);
+}
+
+.image-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(255, 107, 53, 0.2);
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder-image {
+  aspect-ratio: 4/5;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+}

@@ -12,9 +12,8 @@ function About() {
               multi-themed food destination where authentic flavors meet contemporary innovation.
             </p>
             <p className="about-text">
-              Nestled in the vibrant Prahladnagar-SG Highway corridor, we offer an 
-              unparalleled dining experience that celebrates India's rich culinary heritage 
-              while embracing modern gastronomy.
+              We offer an unparalleled dining experience that celebrates India's rich 
+              culinary heritage while embracing modern gastronomy.
             </p>
             <div className="about-features">
               <div className="feature-item">

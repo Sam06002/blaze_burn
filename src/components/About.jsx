@@ -34,7 +34,7 @@ function About() {
               </div>
               <div className="feature-item">
                 <div className="feature-icon">🍽️</div>
-                <h3>300+ Dishes</h3>
+                <h3>900+ Dishes</h3>
                 <p>Extensive menu spanning 6 cuisines with something for everyone</p>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './MenuHighlights.css';
 
 function MenuHighlights() {
@@ -46,7 +47,7 @@ function MenuHighlights() {
         <div className="section-header">
           <h2 className="section-title">Our Menu Highlights</h2>
           <p className="section-subtitle">
-            Explore 300+ delicious vegetarian dishes across multiple cuisines
+            Explore 900+ delicious vegetarian dishes across multiple cuisines
           </p>
         </div>
         <div className="menu-grid">
@@ -72,7 +73,7 @@ function MenuHighlights() {
         </div>
         <div className="menu-cta">
           <p className="menu-note">And many more culinary delights await you!</p>
-          <a href="#contact" className="btn btn-primary">View Full Menu</a>
+          <Link to="/menu" className="btn btn-primary">View Full Menu</Link>
         </div>
       </div>
     </section>
@@ -80,3 +81,4 @@ function MenuHighlights() {
 }
 
 export default MenuHighlights;
+

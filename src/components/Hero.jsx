@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "./Hero.css";
 
 function Hero() {
@@ -24,12 +25,12 @@ function Hero() {
           className="hero-buttons fade-in-up"
           style={{ animationDelay: "0.6s" }}
         >
-          <a href="#contact" className="btn btn-primary">
-            Reserve Your Table
-          </a>
-          <a href="#menu" className="btn btn-outline">
+          <Link to="/contact" className="btn btn-primary">
+            Contact Us
+          </Link>
+          <Link to="/menu" className="btn btn-outline">
             Explore Menu
-          </a>
+          </Link>
         </div>
         <div className="scroll-indicator">
           <div className="scroll-arrow"></div>

@@ -1,0 +1,47 @@
+.contact-page {
+  min-height: 100vh;
+}
+
+.contact-page-hero {
+  background: var(--gradient-dark);
+  padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-lg);
+  text-align: center;
+  position: relative;
+}
+
+.contact-page-hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--metal-accent),
+    transparent
+  );
+}
+
+.contact-page-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--text-light);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.contact-page-subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--metal-accent);
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-page-hero {
+    padding: calc(60px + var(--spacing-md)) 0 var(--spacing-md);
+  }
+}

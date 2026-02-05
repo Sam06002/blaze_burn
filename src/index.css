@@ -7,33 +7,34 @@
 }
 
 :root {
-  /* Premium Food-Inspired Color Palette */
-  --flame-orange: #ff6b35;
-  --sunset-red: #d32f2f;
-  --golden-yellow: #ffb300;
-  --spice-brown: #8b4513;
-  --cream: #fff8e7;
-  --charcoal: #2c2c2c;
-  --deep-black: #0a0a0a;
-  --soft-white: #fafafa;
-  --light-gray: #e8e8e8;
-  --sage-green: #7cb342;
+  /* Premium Ember-Themed Palette - Dark & Sophisticated */
+  --primary-core: #1B0A0F;           /* Deep burgundy-black for backgrounds */
+  --ember-highlight: #8C1D18;        /* Signature ember red for CTAs */
+  --metal-accent: #B08D3B;           /* Legacy gold for borders/highlights */
+  --flame-glow: #D46A1F;             /* Premium amber for hover states */
+  --micro-highlight: #F2B24A;        /* Bright amber for small accents */
+  
+  /* Supporting colors for text and backgrounds */
+  --text-light: #F5F5F5;             /* Light text on dark backgrounds */
+  --text-muted: #C4C4C4;             /* Muted text */
+  --bg-card: #2A1419;                /* Card backgrounds (slightly lighter than primary) */
+  --bg-overlay: rgba(27, 10, 15, 0.95); /* Semi-transparent overlay */
 
-  /* Gradients */
+  /* Gradients - Ember Theme */
   --gradient-primary: linear-gradient(
     135deg,
-    var(--flame-orange) 0%,
-    var(--sunset-red) 100%
+    var(--ember-highlight) 0%,
+    var(--flame-glow) 100%
   );
   --gradient-accent: linear-gradient(
     135deg,
-    var(--golden-yellow) 0%,
-    var(--flame-orange) 100%
+    var(--metal-accent) 0%,
+    var(--micro-highlight) 100%
   );
   --gradient-dark: linear-gradient(
     135deg,
-    var(--deep-black) 0%,
-    var(--charcoal) 100%
+    var(--primary-core) 0%,
+    var(--bg-card) 100%
   );
 
   /* Typography */
@@ -47,11 +48,12 @@
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 24px rgba(255, 107, 53, 0.3);
+  /* Shadows - Ember Glow Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-ember: 0 0 24px rgba(212, 106, 31, 0.4);  /* Flame glow */
+  --shadow-metal: 0 0 16px rgba(176, 141, 59, 0.3);  /* Gold accent glow */
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -65,8 +67,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--charcoal);
-  background-color: var(--soft-white);
+  color: var(--text-light);
+  background-color: var(--primary-core);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -116,7 +118,7 @@ h6 {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg), var(--shadow-ember);
 }
 
 .btn-primary::before {
@@ -141,14 +143,15 @@ h6 {
 
 .btn-outline {
   background: transparent;
-  color: var(--flame-orange);
-  border: 2px solid var(--flame-orange);
+  color: var(--metal-accent);
+  border: 2px solid var(--metal-accent);
 }
 
 .btn-outline:hover {
-  background: var(--flame-orange);
-  color: white;
+  background: var(--metal-accent);
+  color: var(--primary-core);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-metal);
 }
 
 /* Animations */

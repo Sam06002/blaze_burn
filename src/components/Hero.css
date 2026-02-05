@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.8) 100%);
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg-overlay) 100%);
   z-index: 1;
 }
 
@@ -51,7 +51,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 20px rgba(255, 179, 0, 0.5));
+  filter: drop-shadow(0 0 30px rgba(242, 178, 74, 0.6));
 }
 
 .hero-subtitle {
@@ -59,14 +59,14 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 600;
   margin-bottom: var(--spacing-sm);
-  color: var(--cream);
+  color: var(--text-light);
   font-style: italic;
 }
 
 .hero-description {
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 300;
-  color: var(--light-gray);
+  color: var(--text-muted);
   margin-bottom: var(--spacing-md);
   max-width: 700px;
   margin-left: auto;
@@ -82,41 +82,61 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: var(--spacing-md);
+  bottom: var(--spacing-lg);
   left: 50%;
   transform: translateX(-50%);
-  animation: float 3s ease-in-out infinite;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
 }
 
 .scroll-arrow {
-  width: 30px;
-  height: 50px;
-  border: 2px solid var(--flame-orange);
-  border-radius: 25px;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--flame-glow) 50%,
+    transparent
+  );
   position: relative;
+  animation: scrollPulse 2s ease-in-out infinite;
 }
 
 .scroll-arrow::before {
   content: '';
   position: absolute;
-  top: 10px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  background: var(--flame-orange);
-  border-radius: 50%;
-  animation: scrollDot 2s ease-in-out infinite;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--flame-glow);
+  border-bottom: 2px solid var(--flame-glow);
+  transform: translateX(-50%) rotate(45deg);
+  animation: arrowBounce 2s ease-in-out infinite;
 }
 
-@keyframes scrollDot {
+@keyframes scrollPulse {
   0%, 100% {
-    top: 10px;
-    opacity: 1;
+    opacity: 0.3;
   }
   50% {
-    top: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    bottom: 0;
     opacity: 0.5;
+  }
+  50% {
+    bottom: -8px;
+    opacity: 1;
   }
 }
 

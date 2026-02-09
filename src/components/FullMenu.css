@@ -1,5 +1,5 @@
 .full-menu {
-  background: var(--primary-core);
+  background: var(--rich-black);
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--metal-accent),
+    var(--golden-accent),
     transparent
   );
 }
@@ -33,7 +33,7 @@
 }
 
 .menu-tab {
-  background: var(--bg-card);
+  background: var(--charcoal);
   border: 2px solid rgba(176, 141, 59, 0.2);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 50px;
@@ -49,7 +49,7 @@
 }
 
 .menu-tab:hover {
-  border-color: var(--metal-accent);
+  border-color: var(--golden-accent);
   background: rgba(176, 141, 59, 0.05);
   transform: translateY(-2px);
   box-shadow: var(--shadow-metal);
@@ -57,8 +57,8 @@
 
 .menu-tab.active {
   background: var(--gradient-accent);
-  border-color: var(--metal-accent);
-  color: var(--primary-core);
+  border-color: var(--golden-accent);
+  color: var(--rich-black);
   box-shadow: var(--shadow-metal);
 }
 
@@ -122,11 +122,11 @@
 
 .cuisine-card:hover::before {
   opacity: 1;
-  background: linear-gradient(135deg, var(--flame-glow), transparent 60%);
+  background: linear-gradient(135deg, var(--ember-glow), transparent 60%);
 }
 
 .cuisine-card.expanded {
-  border-color: var(--flame-glow);
+  border-color: var(--ember-glow);
   box-shadow: 
     0 10px 40px rgba(0, 0, 0, 0.4),
     0 0 30px rgba(212, 106, 31, 0.4); /* Stronger ember glow */
@@ -174,7 +174,7 @@
 
 .cuisine-card:hover .cuisine-image {
   transform: scale(1.1);
-  border-color: var(--flame-glow);
+  border-color: var(--ember-glow);
   box-shadow: 0 0 20px rgba(212, 106, 31, 0.6);
 }
 
@@ -207,7 +207,7 @@
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  color: var(--flame-glow);
+  color: var(--ember-glow);
   font-size: 1.25rem;
   font-weight: 300;
   transition: all 0.4s ease;
@@ -217,16 +217,16 @@
 
 .cuisine-card:hover .expand-icon {
   background: var(--gradient-accent);
-  color: var(--primary-core);
+  color: var(--rich-black);
   border-color: transparent;
   transform: rotate(90deg);
 }
 
 .cuisine-card.expanded .expand-icon {
   transform: rotate(180deg); /* 180 + 90 if hovered, but let's keep it simple */
-  background: var(--flame-glow);
+  background: var(--ember-glow);
   color: white;
-  box-shadow: 0 0 15px var(--flame-glow);
+  box-shadow: 0 0 15px var(--ember-glow);
 }
 
 /* Cuisine Items */
@@ -268,7 +268,7 @@
 
 .cuisine-items li:hover {
   padding-left: 8px;
-  color: var(--metal-accent);
+  color: var(--golden-accent);
   background: linear-gradient(90deg, rgba(255,255,255,0.05), transparent);
 }
 
@@ -278,7 +278,7 @@
 
 .cuisine-items li::before {
   content: '✦'; /* Changed bullet */
-  color: var(--flame-glow);
+  color: var(--ember-glow);
   margin-right: var(--spacing-sm);
   font-size: 0.8rem;
   opacity: 0.8;
@@ -291,7 +291,7 @@
 }
 
 .view-full-link a {
-  color: var(--metal-accent);
+  color: var(--golden-accent);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
@@ -302,7 +302,7 @@
 }
 
 .view-full-link a:hover {
-  color: var(--flame-glow);
+  color: var(--ember-glow);
   gap: 8px;
 }
 

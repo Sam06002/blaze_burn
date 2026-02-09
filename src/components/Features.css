@@ -1,11 +1,12 @@
 .features {
-  background: var(--bg-card);
+  background: var(--charcoal);
+  padding: var(--spacing-section) 0; /* Enhanced section spacing */
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-md);
+  gap: var(--spacing-gap); /* Standardized grid gap (2rem) */
 }
 
 .feature-card {
@@ -14,43 +15,43 @@
 }
 
 .feature-card-inner {
-  background: var(--primary-core);
+  background: var(--rich-black);
   border: 1px solid rgba(176, 141, 59, 0.2);
-  padding: var(--spacing-md);
-  border-radius: 20px;
+  padding: var(--spacing-md); /* Increased padding */
+  border-radius: var(--radius-md); /* Standardized 16px */
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-smooth);
+  transition: all var(--transition-base); /* Standardized */
   text-align: center;
   height: 100%;
 }
 
 .feature-card-inner:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-6px) scale(1.01); /* Refined animation */
   box-shadow: var(--shadow-lg), var(--shadow-ember);
-  border-color: var(--metal-accent);
+  border-color: var(--golden-accent);
 }
 
 .feature-icon-large {
   width: 100px;
   height: 100px;
   margin: 0 auto var(--spacing-md);
-  border-radius: 50%;
+  border-radius: var(--radius-circle); /* Standardized */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   box-shadow: var(--shadow-md);
-  transition: all var(--transition-smooth);
+  transition: all var(--transition-base); /* Standardized */
 }
 
 .feature-image-container {
   width: 100%;
-  height: 200px;
+  height: 220px; /* Slightly taller */
   margin-bottom: var(--spacing-md);
-  border-radius: 16px;
+  border-radius: var(--radius-md); /* Standardized 16px */
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: all var(--transition-smooth);
+  transition: all var(--transition-base); /* Standardized */
 }
 
 .feature-image {
@@ -71,7 +72,7 @@
 
 .feature-card h3 {
   font-size: 1.5rem;
-  color: var(--metal-accent);
+  color: var(--golden-accent);
   margin-bottom: var(--spacing-sm);
 }
 

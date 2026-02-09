@@ -7,58 +7,75 @@
 }
 
 :root {
-  /* Premium Ember-Themed Palette - Dark & Sophisticated */
-  --primary-core: #1B0A0F;           /* Deep burgundy-black for backgrounds */
-  --ember-highlight: #8C1D18;        /* Signature ember red for CTAs */
-  --metal-accent: #B08D3B;           /* Legacy gold for borders/highlights */
-  --flame-glow: #D46A1F;             /* Premium amber for hover states */
-  --micro-highlight: #F2B24A;        /* Bright amber for small accents */
+  /* Blaze Color System - Premium Purple, Burgundy & Gold Palette */
+  
+  /* Primary Foundation */
+  --primary-core: #1B0A0F;           /* Deep purple-black (sophisticated dark base) */
+  --charcoal-warm: #2A1E1F;          /* Warm charcoal (card backgrounds) */
+  --dark-slate: #2C2C2C;             /* Medium dark for layering (keep for compatibility) */
+  
+  /* Signature Accents */
+  --signature-ember: #8C1D18;        /* Rich burgundy red (primary accent) */
+  --fire-ember: #D46A1F;             /* Vibrant fire orange (secondary accent) */
+  --legacy-gold: #B08D3B;            /* Antique gold (premium highlights) */
+  --bright-gold: #F2B124;            /* Lighter gold (subtle accents) */
+  
+  /* Legacy Aliases for Compatibility */
+  --rich-black: #1B0A0F;             /* Alias to primary-core */
+  --charcoal: #2A1E1F;               /* Alias to charcoal-warm */
+  --ember-glow: #D46A1F;             /* Alias to fire-ember */
+  --warm-ember: #D46A1F;             /* Alias to fire-ember */
+  --golden-accent: #B08D3B;          /* Alias to legacy-gold */
   
   /* Supporting colors for text and backgrounds */
+  --premium-white: #FAFAFA;          /* Off-white for elegance */
+  --soft-cream: #F5F1E8;             /* Warm light backgrounds */
+  --warm-gray: #4A4A4A;              /* Muted text on light backgrounds */
   --text-light: #F5F5F5;             /* Light text on dark backgrounds */
-  --text-muted: #C4C4C4;             /* Muted text */
-  --bg-card: #2A1419;                /* Card backgrounds (slightly lighter than primary) */
-  --bg-overlay: rgba(27, 10, 15, 0.95); /* Semi-transparent overlay */
+  --text-muted: #B8B8B8;             /* Softer muted text */
+  --bg-overlay: rgba(27, 10, 15, 0.95); /* Purple-black semi-transparent overlay */
 
-  /* Gradients - Ember Theme */
-  --gradient-primary: linear-gradient(
-    135deg,
-    var(--ember-highlight) 0%,
-    var(--flame-glow) 100%
-  );
-  --gradient-accent: linear-gradient(
-    135deg,
-    var(--metal-accent) 0%,
-    var(--micro-highlight) 100%
-  );
-  --gradient-dark: linear-gradient(
-    135deg,
-    var(--primary-core) 0%,
-    var(--bg-card) 100%
-  );
+  /* Gradients - Premium Blaze Theme */
+  --gradient-primary: linear-gradient(135deg, #D46A1F 0%, #8C1D18 100%); /* Fire to burgundy */
+  --gradient-accent: linear-gradient(135deg, #F2B124 0%, #B08D3B 100%); /* Bright to antique gold */
+  --gradient-ember: radial-gradient(circle, rgba(140, 29, 24, 0.15) 0%, transparent 70%); /* Burgundy glow */
+  --gradient-dark: linear-gradient(135deg, #1B0A0F 0%, #2A1E1F 100%); /* Purple-black to warm charcoal */
 
   /* Typography */
   --font-display: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
 
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
+  /* Enhanced Spacing System - More Breathing Room */
+  --spacing-xs: 0.75rem;      /* 12px - increased from 8px */
+  --spacing-sm: 1.25rem;      /* 20px - increased from 16px */
+  --spacing-md: 2.5rem;       /* 40px - increased from 32px */
+  --spacing-lg: 5rem;         /* 80px - increased from 64px */
+  --spacing-xl: 4rem;         /* 64px - reduced from 128px (was too large) */
+  --spacing-xxl: 6rem;        /* 96px - reduced from 192px (was too large) */
+  --spacing-section: 5rem;    /* 80px - reduced from 96px for better flow */
+  --spacing-gap: 2rem;        /* Standard grid/flex gap */
 
-  /* Shadows - Ember Glow Effects */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
-  --shadow-ember: 0 0 24px rgba(212, 106, 31, 0.4);  /* Flame glow */
-  --shadow-metal: 0 0 16px rgba(176, 141, 59, 0.3);  /* Gold accent glow */
+  /* Border System - Standardized Radii */
+  --radius-sm: 8px;           /* Small elements, badges */
+  --radius-md: 16px;          /* Cards, containers (STANDARD) */
+  --radius-lg: 24px;          /* Large cards, headers */
+  --radius-pill: 50px;        /* Buttons, pills */
+  --radius-circle: 50%;       /* Icon containers */
 
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Enhanced Shadow System - Warm Purple-Black Elevations */
+  --shadow-xs: 0 1px 4px rgba(27, 10, 15, 0.2);
+  --shadow-sm: 0 2px 8px rgba(27, 10, 15, 0.3);
+  --shadow-md: 0 4px 16px rgba(27, 10, 15, 0.4);
+  --shadow-lg: 0 8px 32px rgba(27, 10, 15, 0.5);
+  --shadow-xl: 0 16px 64px rgba(27, 10, 15, 0.6);
+  --shadow-ember: 0 4px 24px rgba(140, 29, 24, 0.3);  /* Burgundy glow */
+  --shadow-gold: 0 4px 24px rgba(176, 141, 59, 0.3);  /* Antique gold glow */
+
+  /* Standardized Transitions - 0.3s as base */
+  --transition-base: 0.3s ease-in-out;                    /* Standard for most interactions */
+  --transition-fast: 0.15s ease-in-out;                   /* Quick feedback */
+  --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth expansions */
+  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Special effects */
 }
 
 html {
@@ -67,21 +84,74 @@ html {
 
 body {
   font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8; /* Enhanced readability */
   color: var(--text-light);
-  background-color: var(--primary-core);
-  line-height: 1.6;
+  background: var(--primary-core); /* Deep purple-black */
   overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
+/* ========================================
+   ENHANCED TYPOGRAPHY SCALE
+   ======================================== */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em; /* Tighter for large text sophistication */
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-sm);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.8;
+  letter-spacing: 0.01em; /* Slight spacing for elegance */
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Eyebrow Text - Premium Detail */
+.eyebrow-text {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--golden-accent);
+  margin-bottom: var(--spacing-xs);
+  display: block;
 }
 
 /* Utility Classes */
@@ -91,9 +161,38 @@ h6 {
   padding: 0 var(--spacing-md);
 }
 
-.section {
-  padding: var(--spacing-xl) 0;
+/* Section Divider - Solid Separation */
+.section-divider {
+  height: 200px;
+  background: #0a0a0a; /* Solid dark background */
+  position: relative;
 }
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 800px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(176, 141, 59, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+/* Section with Premium Vertical Spacing */
+.section {
+  padding: 60px 0; /* Reduced for tighter flow */
+}
+
+/* ========================================
+   BUTTONS & CTAs
+   ======================================== */
 
 .btn {
   display: inline-block;
@@ -101,11 +200,12 @@ h6 {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
+  letter-spacing: 0.02em; /* Elegant spacing */
   text-decoration: none;
   border: none;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all var(--transition-smooth);
+  transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
 }
@@ -113,12 +213,12 @@ h6 {
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 16px rgba(230, 126, 34, 0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg), var(--shadow-ember);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(230, 126, 34, 0.5);
 }
 
 .btn-primary::before {
@@ -143,15 +243,15 @@ h6 {
 
 .btn-outline {
   background: transparent;
-  color: var(--metal-accent);
-  border: 2px solid var(--metal-accent);
+  color: var(--golden-accent);
+  border: 2px solid var(--golden-accent);
 }
 
 .btn-outline:hover {
-  background: var(--metal-accent);
-  color: var(--primary-core);
+  background: var(--golden-accent);
+  color: var(--rich-black);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-metal);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
 }
 
 /* Animations */

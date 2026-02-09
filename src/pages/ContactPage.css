@@ -19,7 +19,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--metal-accent),
+    var(--golden-accent),
     transparent
   );
 }
@@ -34,7 +34,7 @@
 
 .contact-page-subtitle {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  color: var(--metal-accent);
+  color: var(--golden-accent);
   font-weight: 500;
   max-width: 800px;
   margin: 0 auto;

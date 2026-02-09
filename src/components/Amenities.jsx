@@ -3,34 +3,34 @@ import './Amenities.css';
 function Amenities() {
   const amenities = [
     {
-      icon: '💻',
       title: 'Work-Friendly Cafe',
-      description: 'Laptop-friendly zones with high-speed WiFi and power outlets'
+      description: 'Laptop-friendly zones with high-speed WiFi and power outlets',
+      image: '/images/rooftop_cafe_view_1770051214536.png'
     },
     {
-      icon: '🌿',
-      title: 'Jain Food',
-      description: 'Authentic Jain cuisine prepared following traditional guidelines'
-    },
-    {
-      icon: '💑',
       title: 'Romantic Dining',
-      description: 'Intimate corners perfect for special moments and celebrations'
+      description: 'Intimate corners perfect for special moments and celebrations',
+      image: '/images/restaurant_about_interior_1770051246364.png'
     },
     {
-      icon: '🍽️',
       title: 'Buffet Experience',
-      description: 'Weekend, festive & corporate lunch buffets with unlimited options'
+      description: 'Weekend, festive & corporate lunch buffets with unlimited options',
+      image: '/images/cultural_dining_traditional_1770052121327.png'
     },
     {
-      icon: '⏰',
-      title: 'All-Day Dining',
-      description: 'Breakfast, lunch, and dinner served throughout the day'
+      title: 'Premium Mocktail Bar',
+      description: 'Curated selection of premium non-alcoholic beverages, mocktails, and specialty drinks',
+      image: '/images/beverages_drinks_1770051198662.png'
     },
     {
-      icon: '🍸',
-      title: 'Premium Bar',
-      description: 'Curated selection of premium beverages and cocktails'
+      title: 'Rooftop Café',
+      description: 'Dine under the stars with panoramic city views',
+      image: '/images/rooftop_cafe_view_1770051214536.png'
+    },
+    {
+      title: 'Live Music',
+      description: 'Soulful performances enhancing your dining experience',
+      image: '/images/live_music_performance_1770052138025.png'
     }
   ];
 
@@ -49,13 +49,15 @@ function Amenities() {
             <div 
               key={index} 
               className="amenity-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ 
+                backgroundImage: `url(${amenity.image})`,
+                animationDelay: `${index * 0.1}s` 
+              }}
             >
-              <div className="amenity-icon-wrapper">
-                <div className="amenity-icon">{amenity.icon}</div>
+              <div className="glassmorphism-overlay">
+                <h3>{amenity.title}</h3>
+                <p>{amenity.description}</p>
               </div>
-              <h3>{amenity.title}</h3>
-              <p>{amenity.description}</p>
             </div>
           ))}
         </div>

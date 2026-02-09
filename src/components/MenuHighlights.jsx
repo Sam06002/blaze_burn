@@ -52,22 +52,21 @@ function MenuHighlights() {
         </div>
         <div className="menu-grid">
           {menuCategories.map((category, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="menu-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{
+                backgroundImage: `url(${category.image})`,
+                animationDelay: `${index * 0.1}s`
+              }}
             >
-              <div className="menu-image">
-                <img src={category.image} alt={category.title} />
+              <div className="card-gradient-overlay">
+                <h3>{category.title}</h3>
+                <p className="menu-description">{category.description}</p>
+                <button className="view-details-btn">
+                  View Details →
+                </button>
               </div>
-              <h3>{category.title}</h3>
-              <p className="menu-description">{category.description}</p>
-              <ul className="menu-items">
-                {category.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-              <div className="card-shine"></div>
             </div>
           ))}
         </div>

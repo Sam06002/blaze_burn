@@ -88,12 +88,12 @@ function FullMenu() {
     },
     {
       name: 'American',
-      icon: '🍔',
+      image: '/images/cuisines/american.png',
       items: ['Gourmet Burgers', 'Loaded Fries', 'Mac & Cheese', 'American Mains']
     },
     {
       name: 'Continental / Global Fusion',
-      icon: '🌍',
+      image: '/images/cuisines/continental.png',
       items: ['European Veg Dishes', 'Global Bowls', 'Fusion Specials', 'Contemporary Plates']
     }
   ];

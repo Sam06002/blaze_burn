@@ -1,12 +1,13 @@
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: var(--gradient-dark);
   overflow: hidden;
+  padding: var(--spacing-md) 0 var(--spacing-sm); /* Reduced from xxl/xl */
 }
 
 .hero::before {
@@ -40,10 +41,11 @@
 }
 
 .hero-title {
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(3rem, 7vw, 5.5rem); /* Refined scale */
   font-weight: 900;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md); /* Increased spacing */
   letter-spacing: -0.02em;
+  line-height: 1.1; /* Tighter for impact */
 }
 
 .gradient-text {
@@ -99,7 +101,7 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    var(--flame-glow) 50%,
+    var(--ember-glow) 50%,
     transparent
   );
   position: relative;
@@ -114,8 +116,8 @@
   transform: translateX(-50%);
   width: 8px;
   height: 8px;
-  border-right: 2px solid var(--flame-glow);
-  border-bottom: 2px solid var(--flame-glow);
+  border-right: 2px solid var(--ember-glow);
+  border-bottom: 2px solid var(--ember-glow);
   transform: translateX(-50%) rotate(45deg);
   animation: arrowBounce 2s ease-in-out infinite;
 }

@@ -37,19 +37,19 @@
 .info-card:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateX(10px);
-  border-color: var(--metal-accent);
+  border-color: var(--golden-accent);
 }
 
 .info-icon {
   font-size: 2rem;
   margin-bottom: var(--spacing-sm);
-  color: var(--flame-glow);
+  color: var(--ember-glow);
 }
 
 .info-card h3 {
   font-size: 1.25rem;
   margin-bottom: var(--spacing-xs);
-  color: var(--metal-accent);
+  color: var(--golden-accent);
 }
 
 .info-card p {
@@ -59,7 +59,7 @@
 }
 
 .contact-form-container {
-  background: var(--bg-card);
+  background: var(--charcoal);
   padding: var(--spacing-lg);
   border-radius: 24px;
   box-shadow: var(--shadow-lg);
@@ -93,7 +93,7 @@
   font-family: var(--font-body);
   font-size: 1rem;
   transition: all var(--transition-fast);
-  background: var(--primary-core);
+  background: var(--rich-black);
   color: var(--text-light);
 }
 
@@ -101,7 +101,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--metal-accent);
+  border-color: var(--golden-accent);
   box-shadow: 0 0 0 3px rgba(176, 141, 59, 0.2);
 }
 

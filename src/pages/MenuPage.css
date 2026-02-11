@@ -1,5 +1,5 @@
 .menu-page {
-  background: #0a0a0a;
+  background: #1a0f0f;
   min-height: 100vh;
 }
 
@@ -8,10 +8,10 @@
    ======================================== */
 
 .menu-page-hero {
-  background: linear-gradient(135deg, #171214 0%, #0a0a0a 100%);
+  background: linear-gradient(135deg, #1a0f0f 0%, #120a0a 100%);
   padding: var(--spacing-xl) 0 var(--spacing-lg);
   text-align: center;
-  border-bottom: 1px solid rgba(180, 83, 9, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .menu-page-title {
@@ -53,8 +53,8 @@
 .search-bar input {
   width: 100%;
   padding: 14px 50px 14px 20px;
-  background: rgba(28, 28, 28, 0.8);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #d4af37;
   border-radius: 50px;
   color: var(--text-light);
   font-size: 1rem;
@@ -63,9 +63,9 @@
 
 .search-bar input:focus {
   outline: none;
-  border-color: rgba(212, 175, 55, 0.6);
-  background: rgba(28, 28, 28, 0.95);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+  border-color: #f0d060;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
 }
 
 .search-bar input::placeholder {

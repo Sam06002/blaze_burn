@@ -104,29 +104,33 @@
 
 /* View Details Button */
 .view-details-btn {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.9), rgba(140, 29, 24, 0.9));
-  border: none;
+  background: transparent;
+  border: 2px solid #d4af37;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  color: white;
+  border-radius: 50px;
+  color: #d4af37;
+  font-family: 'Lato', 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
   margin-top: var(--spacing-xs);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
   letter-spacing: 0.5px;
 }
 
 .view-details-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 1), rgba(140, 29, 24, 1));
+  background: #d4af37;
+  color: #1a0f0f;
+  border-color: #d4af37;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
 }
 
 .view-details-btn:active {
-  transform: scale(0.98);
+  transform: translateY(0px);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
 }
 
 /* Menu CTA Section */

@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <header className="navbar-header">
       <div className="navbar-container">
-        {/* Logo Section - Centered */}
+        {/* Logo Section - Left */}
         <Link to="/" className="navbar-brand">
           <img src="/blazeburn-icon.svg" alt="Blazeburn Icon" className="brand-icon" />
           <div className="brand-text">

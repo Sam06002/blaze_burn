@@ -18,11 +18,6 @@ function Amenities() {
       image: '/images/cultural_dining_traditional_1770052121327.png'
     },
     {
-      title: 'Premium Mocktail Bar',
-      description: 'Curated selection of premium non-alcoholic beverages, mocktails, and specialty drinks',
-      image: '/images/beverages_drinks_1770051198662.png'
-    },
-    {
       title: 'Rooftop Café',
       description: 'Dine under the stars with panoramic city views',
       image: '/images/rooftop_cafe_view_1770051214536.png'
@@ -31,36 +26,37 @@ function Amenities() {
       title: 'Live Music',
       description: 'Soulful performances enhancing your dining experience',
       image: '/images/live_music_performance_1770052138025.png'
+    },
+    {
+      title: 'Premium Mocktail Bar',
+      description: 'Curated selection of premium non-alcoholic beverages, mocktails, and specialty drinks',
+      image: '/images/beverages_drinks_1770051198662.png'
     }
   ];
 
   return (
-    <section id="amenities" className="amenities section">
-      <div className="container">
-        <div className="amenities-header">
-          <h2 className="section-title">Premium Amenities</h2>
-          <p className="section-subtitle">
-            Every detail crafted to elevate your dining experience
-          </p>
-        </div>
-        
-        <div className="amenities-grid">
-          {amenities.map((amenity, index) => (
-            <div 
-              key={index} 
-              className="amenity-card"
-              style={{ 
-                backgroundImage: `url(${amenity.image})`,
-                animationDelay: `${index * 0.1}s` 
-              }}
-            >
-              <div className="glassmorphism-overlay">
-                <h3>{amenity.title}</h3>
-                <p>{amenity.description}</p>
-              </div>
+    <section id="amenities" className="amenities">
+      <div className="amenities-header">
+        <h2 className="section-title">Premium Amenities</h2>
+        <p className="section-subtitle">
+          Every detail crafted to elevate your dining experience
+        </p>
+      </div>
+      
+      <div className="amenities-grid">
+        {amenities.map((amenity, index) => (
+          <div 
+            key={index} 
+            className="amenity-card"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <div className="amenity-image-wrapper">
+              <img src={amenity.image} alt={amenity.title} className="amenity-image" />
             </div>
-          ))}
-        </div>
+            <h3>{amenity.title}</h3>
+            <p>{amenity.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

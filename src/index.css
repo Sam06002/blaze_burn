@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700;900&family=Raleway:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -17,15 +17,15 @@
   /* Signature Accents */
   --signature-ember: #8C1D18;        /* Rich burgundy red (primary accent) */
   --fire-ember: #D46A1F;             /* Vibrant fire orange (secondary accent) */
-  --legacy-gold: #B08D3B;            /* Antique gold (premium highlights) */
-  --bright-gold: #F2B124;            /* Lighter gold (subtle accents) */
+  --legacy-gold: #d4af37;            /* Unified gold (#d4af37) */
+  --bright-gold: #d4af37;            /* Unified gold (#d4af37) */
   
   /* Legacy Aliases for Compatibility */
   --rich-black: #1B0A0F;             /* Alias to primary-core */
   --charcoal: #2A1E1F;               /* Alias to charcoal-warm */
   --ember-glow: #D46A1F;             /* Alias to fire-ember */
   --warm-ember: #D46A1F;             /* Alias to fire-ember */
-  --golden-accent: #B08D3B;          /* Alias to legacy-gold */
+  --golden-accent: #d4af37;          /* Unified gold (#d4af37) */
   
   /* Supporting colors for text and backgrounds */
   --premium-white: #FAFAFA;          /* Off-white for elegance */
@@ -37,13 +37,13 @@
 
   /* Gradients - Premium Blaze Theme */
   --gradient-primary: linear-gradient(135deg, #D46A1F 0%, #8C1D18 100%); /* Fire to burgundy */
-  --gradient-accent: linear-gradient(135deg, #F2B124 0%, #B08D3B 100%); /* Bright to antique gold */
+  --gradient-accent: linear-gradient(135deg, #d4af37 0%, #d4af37 100%); /* Unified gold */
   --gradient-ember: radial-gradient(circle, rgba(140, 29, 24, 0.15) 0%, transparent 70%); /* Burgundy glow */
   --gradient-dark: linear-gradient(135deg, #1B0A0F 0%, #2A1E1F 100%); /* Purple-black to warm charcoal */
 
   /* Typography */
-  --font-display: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
+  --font-display: "Playfair Display", "Cormorant Garamond", serif;
+  --font-body: "Lato", "Raleway", sans-serif;
 
   /* Enhanced Spacing System - More Breathing Room */
   --spacing-xs: 0.75rem;      /* 12px - increased from 8px */
@@ -52,7 +52,7 @@
   --spacing-lg: 5rem;         /* 80px - increased from 64px */
   --spacing-xl: 4rem;         /* 64px - reduced from 128px (was too large) */
   --spacing-xxl: 6rem;        /* 96px - reduced from 192px (was too large) */
-  --spacing-section: 5rem;    /* 80px - reduced from 96px for better flow */
+  --spacing-section: 100px;   /* 100px - consistent section padding */
   --spacing-gap: 2rem;        /* Standard grid/flex gap */
 
   /* Border System - Standardized Radii */
@@ -69,7 +69,7 @@
   --shadow-lg: 0 8px 32px rgba(27, 10, 15, 0.5);
   --shadow-xl: 0 16px 64px rgba(27, 10, 15, 0.6);
   --shadow-ember: 0 4px 24px rgba(140, 29, 24, 0.3);  /* Burgundy glow */
-  --shadow-gold: 0 4px 24px rgba(176, 141, 59, 0.3);  /* Antique gold glow */
+  --shadow-gold: 0 4px 24px rgba(212, 175, 55, 0.3);  /* Antique gold glow */
 
   /* Standardized Transitions - 0.3s as base */
   --transition-base: 0.3s ease-in-out;                    /* Standard for most interactions */
@@ -180,14 +180,14 @@ p {
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(176, 141, 59, 0.2) 50%,
+    rgba(212, 175, 55, 0.2) 50%,
     transparent 100%
   );
 }
 
 /* Section with Premium Vertical Spacing */
 .section {
-  padding: 60px 0; /* Reduced for tighter flow */
+  padding: 100px 0; /* Consistent 100px section padding */
 }
 
 /* ========================================

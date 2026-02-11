@@ -14,7 +14,6 @@ function Footer() {
             </div>
           </div>
           <a href="https://blazeburn.in" className="footer-link" target="_blank" rel="noopener noreferrer">
-            www.blazeburn.in
           </a>
         </div>
 

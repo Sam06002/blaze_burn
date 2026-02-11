@@ -48,13 +48,15 @@ function Amenities() {
           <div 
             key={index} 
             className="amenity-card"
-            style={{ animationDelay: `${index * 0.1}s` }}
+            style={{ 
+              backgroundImage: `url(${amenity.image})`,
+              animationDelay: `${index * 0.15}s` 
+            }}
           >
-            <div className="amenity-image-wrapper">
-              <img src={amenity.image} alt={amenity.title} className="amenity-image" />
+            <div className="amenity-card-overlay">
+              <h3>{amenity.title}</h3>
+              <p className="amenity-description">{amenity.description}</p>
             </div>
-            <h3>{amenity.title}</h3>
-            <p>{amenity.description}</p>
           </div>
         ))}
       </div>

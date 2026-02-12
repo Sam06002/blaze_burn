@@ -1,12 +1,12 @@
 .features {
-  background: #2a1a1a;
+  background: #141009;
   padding: 100px 40px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-gap); /* Standardized grid gap (2rem) */
+  gap: var(--spacing-gap);
 }
 
 .feature-card {
@@ -15,43 +15,43 @@
 }
 
 .feature-card-inner {
-  background: var(--rich-black);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  padding: var(--spacing-md); /* Increased padding */
-  border-radius: var(--radius-md); /* Standardized 16px */
+  background: #0d0a08;
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base); /* Standardized */
+  transition: all var(--transition-base);
   text-align: center;
   height: 100%;
 }
 
 .feature-card-inner:hover {
-  transform: translateY(-6px) scale(1.01); /* Refined animation */
+  transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg), var(--shadow-ember);
-  border-color: var(--golden-accent);
+  border-color: #c9a96e;
 }
 
 .feature-icon-large {
   width: 100px;
   height: 100px;
   margin: 0 auto var(--spacing-md);
-  border-radius: var(--radius-circle); /* Standardized */
+  border-radius: var(--radius-circle);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   box-shadow: var(--shadow-md);
-  transition: all var(--transition-base); /* Standardized */
+  transition: all var(--transition-base);
 }
 
 .feature-image-container {
   width: 100%;
-  height: 220px; /* Slightly taller */
+  height: 220px;
   margin-bottom: var(--spacing-md);
-  border-radius: var(--radius-md); /* Standardized 16px */
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: all var(--transition-base); /* Standardized */
+  transition: all var(--transition-base);
 }
 
 .feature-image {
@@ -72,12 +72,12 @@
 
 .feature-card h3 {
   font-size: 1.5rem;
-  color: var(--golden-accent);
+  color: #c9a96e;
   margin-bottom: var(--spacing-sm);
 }
 
 .feature-card p {
-  color: var(--text-muted);
+  color: #c4b99a;
   opacity: 0.9;
   line-height: 1.6;
   font-size: 1rem;

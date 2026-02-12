@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(13, 10, 8, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -32,7 +32,7 @@
 .brand-icon {
   height: 36px;
   width: auto;
-  filter: drop-shadow(0 0 8px rgba(140, 29, 24, 0.5));
+  filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.3));
 }
 
 .brand-text h1 {

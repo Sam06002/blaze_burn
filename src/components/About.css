@@ -1,5 +1,5 @@
 .about {
-  background: #2a1a1a;
+  background: #141009;
   overflow: hidden;
   position: relative;
   padding: 100px 40px;
@@ -13,17 +13,16 @@
   position: relative;
   min-height: 700px;
   margin-bottom: var(--spacing-xl);
-  /* Removed padding-top to avoid stacking with .about section padding */
 }
 
 .about-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8vw, 6.5rem); /* Larger scale */
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
   font-weight: 700;
-  line-height: 1.05; /* Tighter for impact */
-  letter-spacing: -0.02em; /* Premium tightness */
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--text-light);
-  text-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  text-shadow: 0 4px 20px rgba(201, 169, 110, 0.2);
   position: relative;
   z-index: 10;
   max-width: 700px;
@@ -46,13 +45,13 @@
 .about-collage {
   position: relative;
   height: 600px;
-  margin-top: -150px; /* Overlap with title */
-  overflow: visible; /* Allow images to overlap naturally */
+  margin-top: -150px;
+  overflow: visible;
 }
 
 .collage-image {
   position: absolute;
-  border-radius: var(--radius-lg); /* Standardized 24px */
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   transition: all var(--transition-base);
@@ -100,7 +99,7 @@
   height: 320px;
   right: 80px;
   top: 250px;
-  z-index: 7; /* Higher z-index to appear on top */
+  z-index: 7;
   animation: fadeInRight 1s ease-out 0.8s backwards;
 }
 
@@ -189,7 +188,7 @@
 /* Content Text Styling */
 .content-heading {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--golden-accent);
+  color: #c9a96e;
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
   position: relative;
@@ -203,7 +202,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: var(--gradient-primary);
+  background: #c9a96e;
   border-radius: 2px;
 }
 
@@ -240,7 +239,7 @@
    ======================================== */
 
 .about-features-section {
-  background: #1a0a0a;
+  background: #0d0a08;
   padding: 100px 40px;
 }
 
@@ -253,8 +252,8 @@
 .feature-item {
   text-align: center;
   padding: 40px 24px 32px;
-  background: transparent;
-  border: 1px solid #d4af37;
+  background: rgba(255, 248, 235, 0.04);
+  border: 1px solid rgba(201, 169, 110, 0.25);
   border-radius: 12px;
   transition: all 0.4s ease;
   position: relative;
@@ -266,7 +265,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.4s ease;
   border-radius: 12px;
@@ -279,8 +278,8 @@
 
 .feature-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
-  border-color: #f0d060;
+  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.1);
+  border-color: #e8d5b0;
 }
 
 /* Ensure content sits above the overlay */
@@ -306,28 +305,28 @@
   height: 80px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #d4af37;
-  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.25);
+  border: 2px solid #c9a96e;
+  box-shadow: 0 4px 16px rgba(201, 169, 110, 0.15);
   transition: all 0.4s ease;
 }
 
 .feature-item:hover .feature-image {
   transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.25);
 }
 
 .feature-item h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #d4af37;
+  color: #c9a96e;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
 
 .feature-item p {
   font-size: 0.9rem;
-  color: #9ca3af;
+  color: #c4b99a;
   opacity: 1;
   line-height: 1.6;
 }
@@ -368,7 +367,6 @@
     margin-top: -100px;
   }
   
-  /* Simplify to 2 images on tablet */
   .collage-large {
     width: 350px;
     height: 450px;
@@ -383,7 +381,7 @@
   }
   
   .collage-small {
-    display: none; /* Hide smallest image */
+    display: none;
   }
   
   .content-row {
@@ -428,7 +426,6 @@
     margin-top: -80px;
   }
   
-  /* Single large image on mobile */
   .collage-large {
     width: 100%;
     max-width: 350px;
@@ -442,7 +439,6 @@
     display: none;
   }
   
-  /* Disable parallax on mobile for performance */
   [data-parallax] {
     transform: none !important;
   }

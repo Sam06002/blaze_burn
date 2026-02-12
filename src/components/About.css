@@ -236,14 +236,18 @@
 }
 
 /* ========================================
-   FEATURE CARDS GRID
+   FEATURE CARDS SECTION - DARK BACKGROUND
    ======================================== */
+
+.about-features-section {
+  background: #1a0a0a;
+  padding: 100px 40px;
+}
 
 .about-features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  margin-top: var(--spacing-xl);
 }
 
 .feature-item {

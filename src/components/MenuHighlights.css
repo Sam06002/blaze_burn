@@ -1,6 +1,6 @@
 .menu-highlights {
-  background: var(--rich-black);
-  padding-bottom: 40px; /* Tight spacing for seamless transition */
+  background: #2a1a1a;
+  padding: 100px 40px;
 }
 
 .section-header {

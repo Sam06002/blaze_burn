@@ -1,6 +1,6 @@
 .features {
-  background: var(--charcoal);
-  padding: var(--spacing-section) 0; /* Enhanced section spacing */
+  background: #2a1a1a;
+  padding: 100px 40px;
 }
 
 .features-grid {

@@ -1,8 +1,8 @@
 .about {
-  background: var(--charcoal);
+  background: #2a1a1a;
   overflow: hidden;
   position: relative;
-  padding: var(--spacing-section) 0; /* Enhanced section spacing */
+  padding: 100px 40px;
 }
 
 /* ========================================

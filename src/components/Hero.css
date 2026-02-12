@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: var(--gradient-dark);
+  background: #1a0a0a;
   overflow: hidden;
-  padding: var(--spacing-md) 0 var(--spacing-sm); /* Reduced from xxl/xl */
+  padding: 100px 40px;
 }
 
 .hero::before {

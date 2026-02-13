@@ -2,9 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13, 10, 8, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--nav-border);
 }
 
 .navbar-container {
@@ -39,7 +40,7 @@
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--text-primary);
   margin: 0;
   line-height: 1.2;
 }
@@ -48,7 +49,7 @@
   font-family: var(--font-body);
   font-size: 0.6rem;
   letter-spacing: 2px;
-  color: var(--legacy-gold);
+  color: var(--accent);
   text-transform: uppercase;
   display: block;
   opacity: 0.95;
@@ -64,7 +65,7 @@
 .nav-link {
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: var(--text-primary);
   text-decoration: none;
   transition: all 0.3s ease;
   opacity: 0.8;
@@ -73,13 +74,13 @@
 
 .nav-link:hover {
   opacity: 1;
-  color: var(--legacy-gold);
+  color: var(--accent);
 }
 
 .nav-link.active {
   opacity: 1;
-  color: var(--legacy-gold);
-  border-bottom: 2px solid var(--legacy-gold);
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
   padding-bottom: 2px;
 }
 

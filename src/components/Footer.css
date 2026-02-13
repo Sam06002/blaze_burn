@@ -3,10 +3,10 @@
    ======================================== */
 
 .footer-main {
-  background: #0d0a08;
+  background: var(--footer-bg);
   color: rgba(245, 240, 232, 0.85);
   padding: 60px 0;
-  border-top: 1px solid rgba(201, 169, 110, 0.15);
+  border-top: 1px solid var(--border-subtle);
   font-family: 'Inter', 'Lato', sans-serif;
 }
 
@@ -137,7 +137,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(201, 169, 110, 0.25);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;

@@ -1,5 +1,5 @@
 .menu-page {
-  background: #0d0a08;
+  background: var(--bg-primary);
   min-height: 100vh;
 }
 
@@ -8,7 +8,7 @@
    ======================================== */
 
 .menu-page-hero {
-  background: linear-gradient(135deg, #0d0a08 0%, #0a0806 100%);
+  background: var(--bg-secondary);
   padding: var(--spacing-xl) 0 var(--spacing-lg);
   text-align: center;
   border-bottom: 1px solid rgba(201, 169, 110, 0.15);
@@ -16,14 +16,14 @@
 
 .menu-page-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  color: #f5f0e8;
+  color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
   font-family: var(--font-display);
 }
 
 .menu-page-subtitle {
   font-size: 1.125rem;
-  color: #c4b99a;
+  color: var(--text-secondary);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -36,7 +36,7 @@
   position: sticky;
   top: 70px;
   z-index: 200;
-  background: #0d0a08;
+  background: var(--nav-bg);
   padding: var(--spacing-md) 0;
   border-bottom: 1px solid rgba(201, 169, 110, 0.1);
   backdrop-filter: blur(10px);
@@ -53,10 +53,10 @@
 .search-bar input {
   width: 100%;
   padding: 14px 50px 14px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid #c9a96e;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--accent);
   border-radius: 50px;
-  color: var(--text-light);
+  color: var(--text-primary);
   font-size: 1rem;
   transition: all var(--transition-smooth);
 }
@@ -124,16 +124,16 @@
   height: fit-content;
   max-height: calc(100vh - 170px);
   overflow-y: auto;
-  background: rgba(255, 248, 235, 0.04);
+  background: var(--bg-card);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(201, 169, 110, 0.2);
+  border: 1px solid var(--border-primary);
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
 }
 
 .menu-sidebar h3 {
-  color: #c9a96e;
+  color: var(--accent);
   font-size: 1.25rem;
   margin-bottom: var(--spacing-sm);
   padding-bottom: var(--spacing-xs);
@@ -155,7 +155,7 @@
   align-items: center;
   gap: 12px;
   padding: 0.875rem 1rem;
-  color: var(--text-light);
+  color: var(--text-primary);
   text-decoration: none;
   border-radius: var(--radius-sm);
   transition: all var(--transition-base);
@@ -207,8 +207,8 @@
   position: sticky;
   top: 130px;
   z-index: 150;
-  background: #0d0a08;
-  border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
   margin-bottom: var(--spacing-md);
 }
 
@@ -240,10 +240,10 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background: rgba(255, 248, 235, 0.04);
-  border: 1px solid rgba(201, 169, 110, 0.2);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
   border-radius: var(--radius-pill);
-  color: var(--text-light);
+  color: var(--text-primary);
   font-size: 0.9rem;
   cursor: pointer;
   transition: all var(--transition-base);
@@ -340,9 +340,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
-  background: rgba(255, 248, 235, 0.03);
+  background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(201, 169, 110, 0.1);
+  border: 1px solid var(--border-subtle);
 }
 
 .menu-item {
@@ -351,9 +351,9 @@
   align-items: flex-start;
   gap: 12px;
   padding: var(--spacing-sm);
-  background: rgba(255, 248, 235, 0.04);
+  background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(201, 169, 110, 0.08);
+  border: 1px solid var(--border-subtle);
   transition: all var(--transition-base);
 }
 
@@ -370,7 +370,7 @@
 
 .item-name {
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--text-primary);
   margin: 0;
   display: flex;
   align-items: center;
@@ -380,7 +380,7 @@
 
 .item-price {
   font-size: 1rem;
-  color: #c9a96e;
+  color: var(--accent);
   font-weight: 600;
   flex-shrink: 0;
 }

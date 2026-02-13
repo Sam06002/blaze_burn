@@ -1,5 +1,5 @@
 .menu-highlights {
-  background: #141009;
+  background: var(--bg-secondary);
   padding: 100px 40px;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .menu-card:hover h3 {
-  color: #c9a96e;
+  color: var(--accent);
 }
 
 /* Description */
@@ -105,10 +105,10 @@
 /* View Details Button */
 .view-details-btn {
   background: transparent;
-  border: 2px solid #c9a96e;
+  border: 2px solid var(--accent);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
-  color: #c9a96e;
+  color: var(--accent);
   font-family: 'Lato', 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
@@ -121,10 +121,10 @@
 }
 
 .view-details-btn:hover {
-  background: #c9a96e;
-  color: #0d0a08;
-  border-color: #c9a96e;
-  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+  background: var(--accent);
+  color: #fcfbf7;
+  border-color: var(--accent);
+  box-shadow: 0 4px 15px var(--accent-muted);
   transform: translateY(-2px);
 }
 
@@ -143,7 +143,7 @@
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-style: italic;
-  color: #c9a96e;
+  color: var(--accent);
   margin-bottom: var(--spacing-md);
 }
 

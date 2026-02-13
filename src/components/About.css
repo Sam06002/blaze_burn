@@ -1,5 +1,5 @@
 .about {
-  background: #141009;
+  background: var(--bg-secondary);
   overflow: hidden;
   position: relative;
   padding: 100px 40px;
@@ -21,7 +21,7 @@
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--text-light);
+  color: var(--text-primary);
   text-shadow: 0 4px 20px rgba(201, 169, 110, 0.2);
   position: relative;
   z-index: 10;
@@ -188,7 +188,7 @@
 /* Content Text Styling */
 .content-heading {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #c9a96e;
+  color: var(--accent);
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
   position: relative;
@@ -202,7 +202,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: #c9a96e;
+  background: var(--accent);
   border-radius: 2px;
 }
 
@@ -239,7 +239,7 @@
    ======================================== */
 
 .about-features-section {
-  background: #0d0a08;
+  background: var(--bg-primary);
   padding: 120px 40px;
   position: relative;
   overflow: hidden;
@@ -269,10 +269,10 @@
 .feature-item {
   text-align: center;
   padding: 44px 28px 36px;
-  background: rgba(245, 240, 232, 0.03);
+  background: var(--bg-card);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border: 1px solid rgba(201, 169, 110, 0.12);
+  border: 1px solid var(--border-subtle);
   border-radius: 20px;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -288,10 +288,10 @@
   padding: 1px;
   background: linear-gradient(
     135deg,
-    rgba(201, 169, 110, 0.3) 0%,
+    var(--border-primary) 0%,
     transparent 40%,
     transparent 60%,
-    rgba(232, 213, 176, 0.15) 100%
+    var(--border-subtle) 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -328,8 +328,8 @@
 
 /* Hover state */
 .feature-item:hover {
-  background: rgba(245, 240, 232, 0.06);
-  border-color: rgba(201, 169, 110, 0.3);
+  background: var(--bg-tertiary);
+  border-color: var(--border-primary);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     0 0 40px rgba(201, 169, 110, 0.06),
@@ -372,7 +372,7 @@
   height: 88px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid rgba(201, 169, 110, 0.3);
+  border: 2px solid var(--border-primary);
   box-shadow:
     0 4px 16px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(201, 169, 110, 0.08);
@@ -381,7 +381,7 @@
 
 .feature-item:hover .feature-image {
   transform: scale(1.08);
-  border-color: #c9a96e;
+  border-color: var(--accent);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.3),
     0 0 30px rgba(201, 169, 110, 0.15);
@@ -391,19 +391,19 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #f5f0e8;
+  color: var(--text-primary);
   margin-bottom: 10px;
   letter-spacing: 0.5px;
   transition: color 0.4s ease;
 }
 
 .feature-item:hover h3 {
-  color: #c9a96e;
+  color: var(--accent);
 }
 
 .feature-item p {
   font-size: 0.9rem;
-  color: #c4b99a;
+  color: var(--text-secondary);
   opacity: 0.85;
   line-height: 1.6;
   transition: opacity 0.4s ease;

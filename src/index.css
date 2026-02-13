@@ -78,6 +78,85 @@
   --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* ===== DARK THEME (Default) ===== */
+[data-theme="dark"] {
+  --bg-primary: #0d0a08;
+  --bg-secondary: #141009;
+  --bg-tertiary: rgba(255, 248, 235, 0.04);
+  --bg-card: rgba(255, 248, 235, 0.04);
+
+  --text-primary: #f5f0e8;
+  --text-secondary: #c4b99a;
+  --text-muted: #8a7d6b;
+
+  --accent: #c9a96e;
+  --accent-hover: #e8d5b0;
+  --accent-muted: rgba(201, 169, 110, 0.25);
+
+  --border-primary: rgba(201, 169, 110, 0.25);
+  --border-subtle: rgba(201, 169, 110, 0.12);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+
+  --nav-bg: rgba(13, 10, 8, 0.95);
+  --nav-border: rgba(201, 169, 110, 0.15);
+
+  --btn-primary-bg: #c9a96e;
+  --btn-primary-text: #0d0a08;
+  --btn-outline-border: #c9a96e;
+  --btn-outline-text: #c9a96e;
+
+  --hero-overlay: rgba(13, 10, 8, 0.55);
+  --hero-text: var(--text-primary); /* Default light text */
+  --hero-bg: #0d0a08;                /* Always dark background for hero image backing */
+  --footer-bg: #080604;
+}
+
+/* ===== LIGHT THEME (Warm Luxury) ===== */
+[data-theme="light"] {
+  /* Backgrounds: Warm Off-White & Cream */
+  --bg-primary: #fcfbf7;             /* Main background - Very soft warm white */
+  --bg-secondary: #f5f0e8;           /* Section bg - Warm Cream */
+  --bg-tertiary: #efeadd;            /* Tertiary/Card bg - Darker cream */
+  --bg-card: rgba(255, 255, 255, 0.65); /* Glassmorphism card bg */
+
+  /* Text: Deep Warm Browns */
+  --text-primary: #2c241b;           /* Main text - Dark Warm Brown/Charcoal */
+  --text-secondary: #5c4d3c;         /* Subtitles - Medium Warm Brown */
+  --text-muted: #8a7d6b;             /* Muted text - Beige/Brown */
+
+  /* Accents */
+  --accent: #b08d55;                 /* Deep Gold - Darker for contrast on light */
+  --accent-hover: #8c6b3a;           /* Even darker gold for hover */
+  --accent-muted: rgba(176, 141, 85, 0.15);
+
+  /* Borders & Shadows */
+  --border-primary: rgba(176, 141, 85, 0.3);
+  --border-subtle: rgba(176, 141, 85, 0.15);
+  --card-shadow: 0 8px 32px rgba(44, 36, 27, 0.08); /* Soft warm brown shadow */
+
+  /* Component Specifics */
+  --nav-bg: rgba(252, 251, 247, 0.95);
+  --nav-border: rgba(176, 141, 85, 0.15);
+
+  --btn-primary-bg: #b08d55;
+  --btn-primary-text: #fcfbf7;
+  --btn-outline-border: #b08d55;
+  --btn-outline-text: #b08d55;
+
+  --hero-overlay: rgba(0, 0, 0, 0.4); /* Keep dark overlay for original image look */
+  --hero-text: #fcfbf7;              /* Keep text light on dark overlay */
+  --hero-bg: #0d0a08;                /* FORCE dark background for hero image backing in light mode */
+  --bg-overlay: rgba(252, 251, 247, 0.85); /* Light overlay for Hero to make dark text readable */
+  --footer-bg: #1a1510;              /* Keep footer dark even in light mode for contrast? or match? Plan said dark. */
+
+  /* Shadows - Softer for Light Theme */
+  --shadow-xs: 0 1px 4px rgba(44, 36, 27, 0.05);
+  --shadow-sm: 0 2px 8px rgba(44, 36, 27, 0.08);
+  --shadow-md: 0 4px 16px rgba(44, 36, 27, 0.1);
+  --shadow-lg: 0 8px 32px rgba(44, 36, 27, 0.12);
+  --shadow-xl: 0 16px 64px rgba(44, 36, 27, 0.15);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -86,9 +165,10 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--text-light);
-  background: var(--primary-core);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   overflow-x: hidden;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 /* ========================================
@@ -149,7 +229,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--golden-accent);
+  color: var(--accent);
   margin-bottom: var(--spacing-xs);
   display: block;
 }
@@ -164,7 +244,7 @@ p {
 /* Section Divider - Solid Separation */
 .section-divider {
   height: 200px;
-  background: #0d0a08;
+  background: var(--bg-primary);
   position: relative;
 }
 
@@ -180,7 +260,7 @@ p {
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(201, 169, 110, 0.15) 50%,
+    var(--accent-muted) 50%,
     transparent 100%
   );
 }
@@ -208,36 +288,62 @@ p {
 }
 
 .btn-primary {
-  background: transparent;
-  color: #c9a96e;
-  border: 2px solid #c9a96e;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 2px solid var(--btn-primary-bg);
   box-shadow: none;
 }
 
 .btn-primary:hover {
-  background: #c9a96e;
-  color: #0d0a08;
-  border: 2px solid #c9a96e;
-  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+  background: var(--accent-hover);
+  color: var(--btn-primary-text);
+  border: 2px solid var(--accent-hover);
+  box-shadow: 0 4px 15px var(--accent-muted);
   transform: translateY(-2px);
 }
 
 .btn-primary:active {
   transform: translateY(0px);
-  box-shadow: 0 2px 8px rgba(201, 169, 110, 0.2);
+  box-shadow: 0 2px 8px var(--accent-muted);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--golden-accent);
-  border: 2px solid var(--golden-accent);
+  color: var(--btn-outline-text);
+  border: 2px solid var(--btn-outline-border);
 }
 
 .btn-outline:hover {
-  background: var(--golden-accent);
-  color: var(--rich-black);
+  background: var(--btn-outline-border);
+  color: var(--btn-primary-text);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 4px 20px var(--accent-muted);
+}
+
+/* ========================================
+   THEME TRANSITION ANIMATION
+   ======================================== */
+
+.theme-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+}
+
+@keyframes themeReveal {
+  0% {
+    clip-path: circle(0% at calc(100% - 48px) calc(100% - 48px));
+    opacity: 1;
+  }
+  100% {
+    clip-path: circle(150% at calc(100% - 48px) calc(100% - 48px));
+    opacity: 1;
+  }
 }
 
 /* Animations */

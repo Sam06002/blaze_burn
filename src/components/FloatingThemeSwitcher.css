@@ -1,0 +1,137 @@
+.theme-switcher {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.switcher-track {
+  width: 64px;
+  height: 32px;
+  background: var(--accent-muted);
+  border: 1px solid var(--border-primary);
+  border-radius: 100px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  transition: background 0.4s ease;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.switcher-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.4s ease;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Dark theme: moon visible, thumb on left */
+[data-theme="dark"] .switcher-thumb {
+  transform: translateX(0px);
+}
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: block; color: #0d0a08; }
+
+/* Light theme: sun visible, thumb on right */
+[data-theme="light"] .switcher-thumb {
+  transform: translateX(32px);
+}
+[data-theme="light"] .icon-sun { display: block; color: #faf6f0; }
+[data-theme="light"] .icon-moon { display: none; }
+
+/* Hover effect on the whole button */
+.theme-switcher:hover .switcher-track {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px var(--accent-muted);
+}
+
+/* Active/press effect */
+.theme-switcher:active .switcher-thumb {
+  transform: scale(0.95) translateX(var(--thumb-position, 0));
+}
+
+[data-theme="dark"] .theme-switcher:active .switcher-thumb {
+  --thumb-position: 0px;
+}
+
+[data-theme="light"] .theme-switcher:active .switcher-thumb {
+  --thumb-position: 32px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .theme-switcher {
+    bottom: 24px;
+    right: 24px;
+  }
+  
+  .switcher-track {
+    width: 56px;
+    height: 28px;
+  }
+  
+  .switcher-thumb {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+  
+  [data-theme="light"] .switcher-thumb {
+    transform: translateX(28px);
+  }
+  
+  [data-theme="light"] .theme-switcher:active .switcher-thumb {
+    --thumb-position: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-switcher {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .switcher-track {
+    width: 52px;
+    height: 26px;
+  }
+  
+  .switcher-thumb {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+  
+  [data-theme="light"] .switcher-thumb {
+    transform: translateX(26px);
+  }
+  
+  [data-theme="light"] .theme-switcher:active .switcher-thumb {
+    --thumb-position: 26px;
+  }
+}
+
+/* Entrance animation */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.theme-switcher {
+  animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

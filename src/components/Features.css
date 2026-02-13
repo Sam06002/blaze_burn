@@ -1,5 +1,5 @@
 .features {
-  background: #141009;
+  background: var(--bg-secondary);
   padding: 100px 40px;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .feature-card-inner {
-  background: #0d0a08;
-  border: 1px solid rgba(201, 169, 110, 0.25);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -28,7 +28,7 @@
 .feature-card-inner:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg), var(--shadow-ember);
-  border-color: #c9a96e;
+  border-color: var(--accent);
 }
 
 .feature-icon-large {
@@ -72,12 +72,12 @@
 
 .feature-card h3 {
   font-size: 1.5rem;
-  color: #c9a96e;
+  color: var(--accent);
   margin-bottom: var(--spacing-sm);
 }
 
 .feature-card p {
-  color: #c4b99a;
+  color: var(--text-secondary);
   opacity: 0.9;
   line-height: 1.6;
   font-size: 1rem;

@@ -3,7 +3,7 @@
    ======================================== */
 
 .amenities {
-  background: #0d0a08;
+  background: var(--bg-primary);
   padding: 100px 40px;
 }
 
@@ -15,14 +15,14 @@
 .amenities-header .section-title {
   font-family: 'Playfair Display', 'Cormorant Garamond', serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: #c9a96e;
+  color: var(--accent);
   margin-bottom: 16px;
 }
 
 .amenities-header .section-subtitle {
   font-family: 'Lato', 'Raleway', sans-serif;
   font-size: 1.125rem;
-  color: #c4b99a;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -127,7 +127,7 @@
 }
 
 .amenity-card:hover h3 {
-  color: #c9a96e;
+  color: var(--accent);
 }
 
 .amenity-description {

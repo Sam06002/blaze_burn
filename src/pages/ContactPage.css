@@ -3,7 +3,7 @@
 }
 
 .contact-page-hero {
-  background: #0d0a08;
+  background: var(--bg-secondary);
   padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-lg);
   text-align: center;
   position: relative;
@@ -26,7 +26,7 @@
 
 .contact-page-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--text-light);
+  color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -34,7 +34,7 @@
 
 .contact-page-subtitle {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  color: #c9a96e;
+  color: var(--text-secondary);
   font-weight: 500;
   max-width: 800px;
   margin: 0 auto;
